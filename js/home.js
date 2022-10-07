@@ -22,5 +22,5 @@ lottie.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: '../asset/front/front.json',
+  path: '/asset/front/front.json',
 });
