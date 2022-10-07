@@ -1,0 +1,172 @@
+body {
+  background-color: #ffffff;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  height: auto;
+  margin-inline: auto;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  .container {
+    width: 100%;
+    padding-inline: 0.75rem;
+  }
+}
+@media (min-width: 37.5rem) and (max-width: 59.9375rem) {
+  .container {
+    width: 100%;
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 60rem) and (max-width: 89.9375rem) {
+  .container {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 90rem) {
+  .container {
+    width: 90rem;
+    padding-inline: 2.125rem;
+  }
+}
+@media (min-width: 0rem) {
+  .font-body-1 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+  .font-body-1-dense {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  .font-body-2 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+  }
+  .font-body-2-dense {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+  }
+  .font-body-3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+  }
+  .font-body-3-dense {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+  }
+  .font-heading-1 {
+    font-size: 4.5625rem;
+    font-weight: 700;
+    line-height: 5.875rem;
+  }
+  .font-heading-2 {
+    font-size: 3.625rem;
+    font-weight: 700;
+    line-height: 4.75rem;
+  }
+  .font-heading-3 {
+    font-size: 2.8125rem;
+    font-weight: 700;
+    line-height: 3.625rem;
+  }
+  .font-heading-4 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.875rem;
+  }
+  .font-heading-5 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+  }
+  .font-heading-6 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+  .container {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+  }
+}
+@media (min-width: 60rem) {
+  .font-body-1 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+  }
+  .font-body-1-dense {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+  .font-body-2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  .font-body-2-dense {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+  }
+  .font-body-3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+  .font-body-3-dense {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  .font-heading-1 {
+    font-size: 7.3125rem;
+    font-weight: 700;
+    line-height: 9.5rem;
+  }
+  .font-heading-2 {
+    font-size: 5.75rem;
+    font-weight: 700;
+    line-height: 7.5rem;
+  }
+  .font-heading-3 {
+    font-size: 4.5625rem;
+    font-weight: 700;
+    line-height: 5.875rem;
+  }
+  .font-heading-4 {
+    font-size: 3.625rem;
+    font-weight: 700;
+    line-height: 4.75rem;
+  }
+  .font-heading-5 {
+    font-size: 2.8125rem;
+    font-weight: 700;
+    line-height: 3.625rem;
+  }
+  .font-heading-6 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.875rem;
+  }
+  .container {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+}

@@ -1,0 +1,76 @@
+@use 'sass:string';
+@import 'customizations';
+@import 'globalFunctions';
+
+@mixin applyBreakpoint($containerW, $containerPX) {
+  .container {
+    width: $containerW;
+    padding-inline: $containerPX;
+  }
+}
+
+@mixin createTextClasses($fontPrefix) {
+  @for $hierarchy from 1 through 3 {
+    $key: #{$fontPrefix} + '-body-' + #{$hierarchy};
+    .font-body-#{$hierarchy},
+    %font-body-#{$hierarchy} {
+      @include getFontPropertiesFromStyle($key);
+    }
+    $key: #{$fontPrefix} + '-body-' + #{$hierarchy} + '-dense';
+    .font-body-#{$hierarchy}-dense,
+    %font-body-#{$hierarchy}-dense {
+      @include getFontPropertiesFromStyle($key);
+    }
+  }
+  @for $hierarchy from 1 through 6 {
+    $key: #{$fontPrefix} + '-heading-' + #{$hierarchy};
+    .font-heading-#{$hierarchy},
+    %font-heading-#{$hierarchy} {
+      @include getFontPropertiesFromStyle($key);
+    }
+  }
+}
+
+body {
+  background-color: getColorByToken('bg-light');
+}
+
+.section {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  height: auto;
+  margin-inline: auto;
+}
+
+@include eq('hnd') {
+  @include applyBreakpoint(100%, 0.75rem);
+}
+
+@include eq('tbl') {
+  @include applyBreakpoint(100%, 1.5rem);
+}
+
+@include eq('lpt') {
+  @include applyBreakpoint(100%, 2rem);
+}
+
+@include eq('dsk') {
+  @include applyBreakpoint(90rem, 2.125rem);
+}
+
+@include ge('hnd') {
+  @include createTextClasses('sm');
+  .container {
+    @include getFontPropertiesFromStyle('sm-body-2');
+  }
+}
+
+@include ge('lpt') {
+  @include createTextClasses('lg');
+  .container {
+    @include getFontPropertiesFromStyle('lg-body-2');
+  }
+}

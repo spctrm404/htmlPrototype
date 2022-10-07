@@ -1,0 +1,86 @@
+.section-preMenu .posterContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+}
+.section-preMenu .posterContainer > * {
+  flex-grow: 1;
+  max-width: 56rem;
+}
+.section-preMenu .scrollUpBtn {
+  height: 3rem;
+  background-color: #7586ff;
+}
+
+.section-menu {
+  position: relative;
+  background-color: #ffdf99;
+}
+.section-menu .container {
+  background-color: #e7c16e;
+}
+
+.menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+  background-color: #caa658;
+}
+.menu__logo {
+  width: 3rem;
+  height: 3rem;
+  background-color: #af8c41;
+}
+.menu-collapsed {
+  width: 3rem;
+  height: 3rem;
+  background-color: #af8c41;
+}
+.menu-expanded {
+  display: none;
+  height: 3rem;
+}
+.menu-expanded .menu__items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #af8c41;
+}
+.menu-expanded .menu__items__each {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  justify-content: center;
+  background-color: #92732a;
+}
+
+@media (max-width: 37.4375rem) {
+  .menu-expanded {
+    display: none;
+  }
+}
+@media (min-width: 37.5rem) {
+  .menu-expanded {
+    display: flex;
+  }
+  .menu-expanded .menu__items {
+    gap: 2rem;
+  }
+  .menu-collapsed {
+    display: none;
+  }
+}
+@media (min-width: 90rem) {
+  .menu-expanded .menu__items {
+    gap: 2.125rem;
+  }
+}

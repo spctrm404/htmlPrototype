@@ -1,0 +1,102 @@
+@import 'globalFunctions';
+
+$lottieRatio: calc(16 / 9);
+$scrollUpBtnH: 3rem;
+
+.section-preMenu {
+  // background-color: getColorFromPalettes('primary', 90);
+  .container {
+    // background-color: getColorFromPalettes('primary', 80);
+  }
+  .posterContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    // align-items: center;
+    justify-content: center;
+    height: calc(100vh - $scrollUpBtnH);
+    // background-color: getColorFromPalettes('primary', 70);
+    > * {
+      flex-grow: 1;
+      max-width: 56rem;
+    }
+  }
+  .scrollUpBtn {
+    height: $scrollUpBtnH;
+    background-color: getColorFromPalettes('primary', 60);
+  }
+}
+
+.section-menu {
+  position: relative;
+  background-color: getColorFromPalettes('tertiary', 90);
+  .container {
+    background-color: getColorFromPalettes('tertiary', 80);
+  }
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+  background-color: getColorFromPalettes('tertiary', 70);
+  &__logo {
+    width: 3rem;
+    height: 3rem;
+    background-color: getColorFromPalettes('tertiary', 60);
+  }
+  &-collapsed {
+    width: 3rem;
+    height: 3rem;
+    background-color: getColorFromPalettes('tertiary', 60);
+  }
+  &-expanded {
+    display: none;
+    height: 3rem;
+    .menu__items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: getColorFromPalettes('tertiary', 60);
+      &__each {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: stretch;
+        justify-content: center;
+        background-color: getColorFromPalettes('tertiary', 50);
+      }
+    }
+  }
+}
+
+@include le('hnd') {
+  .menu-expanded {
+    display: none;
+  }
+}
+
+@include ge('tbl') {
+  .menu-expanded {
+    display: flex;
+    .menu__items {
+      gap: 2rem;
+    }
+  }
+  .menu-collapsed {
+    display: none;
+  }
+}
+
+@include ge('dsk') {
+  .menu-expanded {
+    .menu__items {
+      gap: 2.125rem;
+    }
+  }
+}
