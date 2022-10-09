@@ -16,7 +16,7 @@ homeBtn.addEventListener('click', (e) => {
   poster.scrollIntoView({ behavior: 'smooth' });
 });
 
-const posterLottie = document.getElementById('posterLottie');
+const posterLottie = document.querySelector('#lottie-poster');
 lottie.loadAnimation({
   container: posterLottie,
   renderer: 'svg',
